@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 text-white transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply from-gray-900 via-gray-800 to-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-3 rounded-full hover:from-primary-400 hover:to-secondary-400 transition-all duration-700 transform hover:scale-105 shadow-lg hover:shadow-primary-500/25 hover:rotate-1 disabled:opacity-50 disabled:cursor-not-allowed font-semibold;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-400 text-white px-8 py-3 rounded-full hover:bg-primary-500 hover:border-primary-500 transition-all duration-700 shadow-lg hover:shadow-primary-500/25 hover:-rotate-1 font-semibold;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6 text-white;
+  }
+  
+  .card {
+    @apply bg-dark-800/95 p-8 rounded-2xl hover:bg-dark-800 transition-all duration-700 shadow-lg hover:shadow-primary-500/10 border border-primary-700/50 hover:scale-[1.02] hover:-rotate-1;
+  }
+
+  .dark .card {
+    @apply bg-gray-800/95 hover:bg-gray-800 border-gray-700/50;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(5px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
