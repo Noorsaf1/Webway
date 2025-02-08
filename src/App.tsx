@@ -77,7 +77,7 @@ function App() {
         'service_t1s7b9k',      // Ersätt med ditt Email.js Service ID
         'template_flgs50j',     // Ersätt med ditt Email.js Template ID
         e.target as HTMLFormElement,
-        'yH-ch4DnxbLI9szI7'          // Ersätt med ditt Email.js User ID
+        'PjMWEk1Mieqvmxmlt'          // Ersätt med ditt Email.js User ID
       );
   
       toast.success('Tack för ditt meddelande! Vi återkommer så snart som möjligt.');
